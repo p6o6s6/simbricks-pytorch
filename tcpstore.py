@@ -10,7 +10,7 @@ def run():
     # 选择一个未被使用的端口，例如'23456'
     # 设置is_master为True，表示这是主节点
     print(f"{torch.__version__=}")
-    socket.getaddrinfo(None, 23456)
+    print(f"{socket.getaddrinfo(None, 23456)=}")
     os.environ["GLOO_SOCKET_IFNAME"] = "eth0"
     #tcp_store = dist.TCPStore('127.0.0.1', 23456, is_master=True)
 
