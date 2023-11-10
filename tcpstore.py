@@ -12,11 +12,11 @@ def run():
     print(f"{torch.__version__=}")
     socket.getaddrinfo(None, 23456)
     os.environ["GLOO_SOCKET_IFNAME"] = "eth0"
-    tcp_store = dist.TCPStore('127.0.0.1', 23456, is_master=True)
+    #tcp_store = dist.TCPStore('127.0.0.1', 23456, is_master=True)
 
     # 你可以使用TCPStore对象来设置和获取键值对
-    tcp_store.set("key", "value")
-    print("The value of 'key' is: ", tcp_store.get("key"))
+    #tcp_store.set("key", "value")
+    #print("The value of 'key' is: ", tcp_store.get("key"))
 
 if __name__ == "__main__":
     run()
