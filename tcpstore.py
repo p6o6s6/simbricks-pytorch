@@ -11,6 +11,7 @@ def run():
     # 设置is_master为True，表示这是主节点
     print(f"{torch.__version__=}")
     print(f"{socket.getaddrinfo(None, 23456)=}")
+    print(f"{socket.getaddrinfo('', 12345, flags=socket.AI_PASSIVE|socket.AI_NUMERICSERV)=}")
     os.environ["GLOO_SOCKET_IFNAME"] = "eth0"
     #tcp_store = dist.TCPStore('127.0.0.1', 23456, is_master=True)
 
