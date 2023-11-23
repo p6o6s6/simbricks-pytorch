@@ -19,6 +19,7 @@ def start_server():
 
         conn.close()
         print('与', addr, '的连接已关闭.')
+        break  # 只处理一次连接请求，然后就断开连接
 
 def start_client():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
